@@ -4,7 +4,8 @@ This is a Python3 MySchool command line application.<br />
 * An informal *cheatsheet* can be seen in **cheatsheet.md**.<br />
 
 ## Setup
-Install the requirements with (**NOTE:** *Check if pip is from Python3, else use pip3 to install*):
+Install the requirements with:<br />
+(**NOTE:** *Check if pip is from Python3, else use pip3 to install*)
 
 > sudo pip install -r requirements.txt
 
@@ -16,7 +17,8 @@ Optionally you can change all three global variables, inside the script:
 * USE_DAY_OF_WEEK
 
 ## Run
-After the setup, you can run the commands that are listed in the *cheatsheet*, e.g. (**NOTE:** *Check if python version is Python3, else use python3 to run the script*):
+After the setup, you can run the commands that are listed in the *cheatsheet*, e.g.:<br />
+(**NOTE:** *Check if python version is Python3, else use python3 to run the script*)
 
 > sudo ./myschool_cmd.py -tt
 
