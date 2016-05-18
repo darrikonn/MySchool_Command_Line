@@ -4,7 +4,7 @@ This is a Python3 MySchool command line application.<br />
 * An informal *cheatsheet* can be seen in **cheatsheet.md**.<br />
 
 ## Setup
-Install the requirements with:
+Install the requirements with (**NOTE:** *check if pip is from Python 3.\*, else use pip3 to install*):
 
 > sudo pip install -r requirements.txt
 
