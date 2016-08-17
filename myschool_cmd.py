@@ -24,6 +24,8 @@ from bs4 import BeautifulSoup
 USERNAME = 'darrik13'
 PASSWORD_FILE_NAME = '.password.txt'
 USE_DAY_OF_THE_WEEK = True          # used for timetable command
+CURRENT_SEMESTER = 'autumn'         # set default values
+CURRENT_YEAR = 2016
 
 #
 # public enum classes
@@ -315,6 +317,11 @@ def print_table(table):
     for t in table:
         print(t)
 
+def getCorrectYearAndSeason(lis):
+    if not lis:
+        return (CURRENT_YEAR, CURRENT_SEMESTER)
+    return (lis[0], lis[1])
+
 #
 # need to validate input files from the user
 #
@@ -399,13 +406,19 @@ def main():
     elif args.booklist:
         print_table(ms.get_book_list())
     elif not args.groups == None:
-        if hasattr(Season, args.groups[1].title()):
-            print_table(ms.get_groups(args.groups[0], args.groups[1]))
+        temp = getCorrectYearAndSeason(args.groups)
+        year = temp[0]
+        season = temp[1]
+        if hasattr(Season, season.title()):
+            print_table(ms.get_groups(year, season))
         else:
             sys.stderr('Season is not valid, "{0}". Valid seasons are "spring", "autumn", "summer", "winter"\n'.format(args.groups[1]))
     elif not args.courses == None:
-        if hasattr(Season, args.courses[1].title()):
-            print_table(ms.get_courses(args.courses[0], args.courses[1]))
+        temp = getCorrectYearAndSeason(args.groups)
+        year = temp[0]
+        season = temp[1]
+        if hasattr(Season, season.title()):
+            print_table(ms.get_courses(year, season))
         else:
             sys.stderr('Season is not valid, "{0}". Valid seasons are "spring", "autumn", "summer", "winter"\n'.format(args.courses[1]))
     else:
