@@ -15,6 +15,8 @@ Optionally you can change all three global variables, inside the script:
 * USERNAME
 * PASSWORD_FILE_NAME
 * USE_DAY_OF_WEEK
+* CURRENT_SEMESTER
+* CURRENT_YEAR
 
 ## Run
 After the setup, you can run the commands that are listed in the *cheatsheet*, e.g.:<br />
