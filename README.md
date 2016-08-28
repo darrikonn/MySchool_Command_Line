@@ -20,11 +20,12 @@ Optionally you can change all three global variables, inside the script:
 
 ## Run
 After the setup, you can run the commands that are listed in the *cheatsheet*, e.g.:<br />
-(**NOTE:** *Check if python version is Python3, else use python3 to run the script*)
+(**NOTE:** *Check if python version is Python3, else use python3 to run the script.*) 
 
 > sudo ./myschool_cmd.py -tt
 
 This command will list your timetable.<br />
+(**NOTE:** If this doesn't work due to encoding, try running the script with: <br />sudo python3 /usr/bin/myschool_cmd.py -tt*)
 
 ## Recommended options (not mandatory)
 I recommend first either moving the file or creating a symbolic link from *myschool_cmd.py* to */usr/bin*, with:
